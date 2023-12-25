@@ -15,3 +15,124 @@ const body = document.querySelector("body"),
 		    nav.classList.remove("active");
 		}
 });
+
+// Department Course Slider
+$('.courses-department').owlCarousel({
+    loop:true,
+    margin:12,
+    nav: false,
+    dots: false,
+    autoplay:true,
+    lazyLoad: true,
+    navText: ['<i class="fa-solid fa-arrow-left"></i>','<i class="fa-solid fa-arrow-right"></i>'],
+    autoplayTimeout: 2000,
+    autoplayHoverPause: true,
+    responsive:{
+        0:{
+            items:2,
+            dots: true,
+            margin:12,
+            autoplay:true,
+            center: true,
+        },
+        575:{
+            items: 3
+        },
+        768:{
+            items:4,
+            nav:true
+        },
+        992:{
+            items:6,
+            nav:true
+        }
+    }
+});
+// Course Slider
+$('.course-carosel').owlCarousel({
+    margin:2,
+    dots: false,
+    navText: ['<i class="fa-solid fa-arrow-left"></i>','<i class="fa-solid fa-arrow-right"></i>'],
+    responsive:{
+        0:{
+            items:1,
+            center: true,
+            loop: true,
+    		nav: true,
+        },
+        575:{
+            items: 3,
+            nav: false,
+        },
+        768:{
+            items:4,
+        },
+        992:{
+            items:4,
+        }
+    }
+});
+// Mentor Slider
+$('.mentor-carosel').owlCarousel({
+    loop:true,
+    margin:12,
+    nav: false,
+    dots: false,
+    autoplay:true,
+    lazyLoad: true,
+    navText: ['<i class="fa-solid fa-arrow-left"></i>','<i class="fa-solid fa-arrow-right"></i>'],
+    autoplayTimeout: 2000,
+    autoplayHoverPause: true,
+    responsive:{
+        0:{
+            items:1,
+            dots: true,
+            margin:12,
+            autoplay:true,
+            center: true,
+        },
+        575:{
+            items: 2,
+        },
+        768:{
+            items:2,
+            nav: true
+        },
+        992:{
+            items:3
+        }
+    }
+});
+
+// Course Slider
+$('.review-carosel').owlCarousel({
+    loop:true,
+    margin:12,
+    nav: true,
+    dots: false,
+    autoplay:true,
+    lazyLoad: true,
+    center: true,
+    navText: ['<i class="fa-solid fa-arrow-left"></i>','<i class="fa-solid fa-arrow-right"></i>'],
+    autoplayTimeout: 2000,
+    autoplayHoverPause: true,
+    responsive:{
+        0:{
+            items:1,
+            dots: true,
+            margin: 12,
+            nav:false,
+            center: true,
+        },
+        575:{
+            items: 1,
+        },
+        768:{
+            items:2,
+            nav: true
+        },
+        992:{
+            items:3
+        }
+    }
+});

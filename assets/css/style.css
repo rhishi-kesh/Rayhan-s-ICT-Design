@@ -4,10 +4,20 @@
     --white: #FFF;
     --gray: #eee;
     --orange: #E16127;
+    --gray: #f4f4f4;
     --blur-o: rgba(44, 52, 126,0.1);
 }
 *{
 	font-family: 'Poppins', sans-serif;
+}
+.section-head h2{
+    color: var(--blue);
+}
+.section-head span{
+    background: var(--orange);
+    width: 80px;
+    height: 5px;
+    display: inline-block;
 }
 .text-brand-1{
     color: var(--orange);
@@ -51,7 +61,6 @@ nav .nav-bar{
     align-items: center;
     justify-content: space-between;
 }
-
 nav .nav-bar .sidebarOpen{
     color: var(--blue);
     font-size: 25px;
@@ -59,28 +68,23 @@ nav .nav-bar .sidebarOpen{
     cursor: pointer;
     display: none;
 }
-
 nav .nav-bar .logo a{
     font-size: 25px;
     font-weight: 500;
     color: var(--dark);
     text-decoration: none;
 }
-
 .menu .logo-toggle{
     display: none;
 }
-
 .nav-bar .nav-links{
     display: flex;
     align-items: center;
 }
-
 .nav-bar .nav-links li{
     margin: 0 0px 0px 15px;
     list-style: none;
 }
-
 .nav-links li a{
     position: relative;
     font-size: 17px;
@@ -119,12 +123,12 @@ nav .nav-bar .logo a{
     width: 100%;
     height: 2px;
     transform: rotate(45deg);
-    background: #fff;
+    background: var(--white);
     transition: all 0.3s;
-    box-shadow: 0px 0px 10px #fff,
-    			0px 0px 20px #fff,
-    			0px 0px 10px #fff,
-    			0px 0px 10px #fff;
+    box-shadow: 0px 0px 10px var(--white),
+    			0px 0px 20px var(--white),
+    			0px 0px 10px var(--white),
+    			0px 0px 10px var(--white);
     z-index: -1;
     animation: btn;
     animation-duration: 4s;
@@ -133,6 +137,7 @@ nav .nav-bar .logo a{
 .nav-links li .admit_btn:hover{
 	color: var(--white);
 }
+/*Nav-end*/
 .hero{
     display: flex;
     justify-content: center;
@@ -140,8 +145,8 @@ nav .nav-bar .logo a{
     background: url('../img/hero-bg.jpg');
     background-size: cover;
     background-position: center;
-    height: 80vh;
-    width: 100%;
+    height: auto;
+    padding-top: 80px;
 }
 .hero h1{
     font-weight: 500;
@@ -169,24 +174,506 @@ nav .nav-bar .logo a{
     width: 100%;
     height: 2px;
     transform: rotate(45deg);
-    background: #fff;
+    background: var(--white);
     transition: all 0.3s;
-    box-shadow: 0px 0px 10px #fff,
-                0px 0px 20px #fff,
-                0px 0px 10px #fff,
-                0px 0px 10px #fff;
+    box-shadow: 0px 0px 10px var(--white),
+                0px 0px 20px var(--white),
+                0px 0px 10px var(--white),
+                0px 0px 10px var(--white);
     z-index: -1;
     animation: hero-btn;
     animation-duration: 4s;
     animation-iteration-count: infinite;
 }
-.banner{
+.hero .banner{
     border-radius: 10px;
-    box-shadow: 0px 0px 10px var(--dark);
+    /*box-shadow: 0px 0px 10px var(--gray);*/
+    position: relative;
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
 }
-.banner img{
+.hero .banner img{
     border-radius: 10px;
 }
+.hero .banner::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background: rgba(0,0,0,0.3);*/
+    border-radius: 10px;
+}
+.hero .banner a{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 22px;
+    color: var(--orange);
+}
+.hero .banner a span{
+    background: var(--white);
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*Banner-end*/
+.hero .owl-carousel .col{
+    text-align: center;
+    padding: 22px;
+    background: var(--white);
+    height: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.hero .owl-carousel img{
+    width: 60px;
+    display: inline-block;
+}
+.hero .owl-carousel a{
+    color: var(--dark);
+    text-decoration: none;
+}
+.hero .owl-carousel h6{
+    margin-top: 10px;
+}
+.hero .courses{
+    margin: 50px 0;
+}
+.hero .courses .owl-prev {
+  position: absolute;
+  left: -50px;
+  top: 40%;
+}
+.hero .courses .owl-next {
+  position: absolute;
+  right:-60px;
+  top: 40%;
+}
+.hero .courses .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev{
+  border: 2px solid var(--blue) !important;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  color: var(--blue);
+  transition: .4s ease-out;
+}
+.hero .owl-theme .owl-nav [class*="owl-"]:hover {
+  border: 2px solid var(--blue) !important;
+  height: 40px;
+  width: 40px;
+  background: var(--blue);
+  border-radius: 50%;
+  color: var(--white) !important;
+}
+.hero .owl-carousel .owl-nav.disabled {
+  display: block;
+}
+/*Hero-end*/
+.Course .course-carosel .nav-item{
+    font-weight: bold;
+    font-size: 15px;
+}
+.Course .course-carosel .nav-item button{
+    color: var(--dark) !important;
+    border-radius: 0px;
+}
+.Course .course-carosel .nav-item .active{
+    background: var(--dark) !important;
+    color: var(--white) !important;
+}
+.Course .tab-content .card img{
+    width: 100%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.Course .tab-content .card .img{
+    display: block;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+.Course .tab-content .card .img::before{
+    position: absolute;
+    top: 0;
+    left: -100%;
+    display: block;
+    content: "";
+    width: 50%;
+    height: 100%;
+    background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+    background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0.3)));
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+    -webkit-transform: skewX(-25deg);
+    -ms-transform: skewX(-25deg);
+    transform: skewX(-25deg);
+    transition: 2s;
+}
+.Course .tab-content .card:hover .img::before{
+    position: absolute;
+    top: 0;
+    left: 100%;
+    display: block;
+    content: "";
+    width: 50%;
+    height: 100%;
+    background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+    background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0.3)));
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+    -webkit-transform: skewX(-25deg);
+    -ms-transform: skewX(-25deg);
+    transform: skewX(-25deg);
+}
+.Course .tab-content .card{
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.Course .tab-content .card:hover{
+    box-shadow: 0px 0px 10px #aaa;
+}
+.Course .tab-content .card:hover h5 a{
+    background-size: 0% 2px, 100% 2px;
+}
+.Course .tab-content .card h5 a{
+    text-decoration: none;
+    color: var(--dark);
+    background-image: linear-gradient(var(--dark), var(--dark)), linear-gradient(var(--dark), var(--dark));
+    background-size: 0% 2px, 0 2px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.4s linear;
+    transition: 0.5s;
+}
+.Course .tab-content .card .mentor{
+    text-decoration: none;
+    color: var(--dark);
+}
+.Course .tab-content .card .buy-btn{
+    text-decoration: none;
+    color: var(--white);
+    background: var(--blue);
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: all 0.6s;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    display: block;
+}
+.Course .tab-content .card .buy-btn:hover::before{
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10%;
+    width: 100%;
+    height: 2px;
+    transform: rotate(45deg);
+    background: var(--white);
+    transition: all 0.3s;
+    box-shadow: 0px 0px 10px var(--white),
+                0px 0px 20px var(--white),
+                0px 0px 10px var(--white),
+                0px 0px 10px var(--white);
+    z-index: -1;
+    animation: hero-btn;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+.Course .owl-nav{
+    position: absolute;
+    right: 0;
+    top: -19px;
+}
+
+.Course .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev{
+  border: 2px solid var(--blue) !important;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  color: var(--blue);
+  transition: .4s ease-out;
+}
+.Course .owl-theme .owl-nav [class*="owl-"]:hover {
+  border: 2px solid var(--blue) !important;
+  height: 40px;
+  width: 40px;
+  background: var(--blue);
+  border-radius: 50%;
+  color: var(--white) !important;
+}
+.Course .owl-carousel .owl-nav.disabled {
+  display: block;
+}
+.Course .owl-carousel .owl-nav.disabled {
+  display: none;
+}
+/*Course-end*/
+.mentors{
+    /*background: var(--gray);*/
+}
+.mentors .card {
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 10px;
+  /*border: 1px;*/
+}
+.mentors .card .mentor-bg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 11rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    box-sizing: border-box;
+
+}
+.mentors .card .mentor-bg .profile {
+    object-fit: cover;
+    background-color: var(--white);
+    width: 8rem;
+    height: 8rem;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.3);
+    border-radius: 50%;
+    transform: translateY(50%);
+    transition: transform 200ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+.mentors .card:hover .profile {
+  transform: translateY(50%) scale(1.1);
+}
+.mentors .card h2.name {
+    margin-top: 80px;
+    font-size: 28px !important;
+    text-align: center;
+}
+.mentors .card .title {
+  color: var(--dark);
+  font-size: 16px;
+  text-align: center;
+  margin-top: -5px;
+  margin-bottom: 20px;
+}
+.mentors .owl-carousel .owl-nav.disabled {
+  display: block;
+}
+.mentors .owl-prev {
+  position: absolute;
+  left: -50px;
+  top: 40%;
+}
+.mentors .owl-next {
+  position: absolute;
+  right:-60px;
+  top: 40%;
+}
+.mentors .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev{
+  border: 2px solid var(--blue) !important;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  color: var(--blue);
+  transition: .4s ease-out;
+}
+.mentors .owl-theme .owl-nav [class*="owl-"]:hover {
+  border: 2px solid var(--blue) !important;
+  height: 40px;
+  width: 40px;
+  background: var(--blue);
+  border-radius: 50%;
+  color: var(--white) !important;
+}
+.mentors .owl-carousel .owl-nav.disabled {
+  display: block;
+}
+.success_story .btn-section p{
+    display: flex !important;
+    justify-content: center;
+    display: inline-block;
+}
+.success_story .seeMore{
+    text-decoration: none;
+    color: var(--white);
+    background: var(--blue);
+    padding: 10px 35px;
+    border-radius: 15px;
+    transition: all 0.6s;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    display: block;
+}
+.success_story .seeMore:hover::before{
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10%;
+    width: 100%;
+    height: 2px;
+    transform: rotate(45deg);
+    background: var(--white);
+    transition: all 0.3s;
+    box-shadow: 0px 0px 10px var(--white),
+                0px 0px 20px var(--white),
+                0px 0px 10px var(--white),
+                0px 0px 10px var(--white);
+    z-index: -1;
+    animation: hero-btn;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+.success_story .banner{
+    border-radius: 10px;
+    /*box-shadow: 0px 0px 10px var(--gray);*/
+    position: relative;
+}
+.success_story .banner img{
+    border-radius: 10px;
+}
+.success_story .banner::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background: rgba(0,0,0,0.3);*/
+    border-radius: 10px;
+}
+.success_story .banner a{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 22px;
+    color: var(--orange);
+}
+.success_story .banner a span{
+    background: var(--white);
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*success_story-end*/
+.Reviews .review .card{
+    z-index: 2;
+    transition: 0.5s;
+}
+.Reviews .review .card .text{
+    min-height: 131px;
+    overflow: hidden;
+}
+.Reviews .review .card .card-footer img{
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+.Reviews .review .card .card-footer{
+    background: var(--white);
+    padding-top: 15px !important;
+    position: relative;
+}
+.Reviews .review .card .card-footer .video-review{
+    position: absolute;
+    background: #fff;
+    width: 95%;
+    height: 100%;
+    top: -100%;
+    left: 0;
+    transition: 0.5s;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+}
+.Reviews .review .card .card-footer .video-review a{
+    display: flex;
+    justify-content: start;
+    text-decoration: none;
+    color: var(--blue);
+    /*padding-top: 15px !important;*/
+}
+.Reviews .review .card .card-footer .video-review a .play{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--blue);
+}
+.Reviews .review .card .card-footer .video-review a p{
+    margin-top: 13px;
+}
+.Reviews .review .card:hover .card-footer .video-review{
+    top: 0;
+    visibility: visible;
+    opacity: 1;
+}
+.Reviews .owl-carousel.owl-drag .owl-item{
+    opacity: 0.2;
+    pointer-events: none;
+}
+.Reviews .owl-carousel.owl-drag .owl-item.center{
+    opacity: 1;
+    pointer-events: inherit;
+}
+.Reviews .owl-prev {
+  position: absolute;
+  left: 27%;
+  top: 40%;
+}
+.Reviews .owl-next {
+  position: absolute;
+  right: 27%;
+  top: 40%;
+}
+.Reviews .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev{
+  border: 2px solid var(--blue) !important;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  color: var(--blue);
+  transition: .4s ease-out;
+}
+.Reviews .owl-theme .owl-nav [class*="owl-"]:hover {
+  border: 2px solid var(--blue) !important;
+  height: 40px;
+  width: 40px;
+  background: var(--blue);
+  border-radius: 50%;
+  color: var(--white) !important;
+}
+
+
+
+
 
 
 
@@ -199,6 +686,7 @@ nav .nav-bar .logo a{
   from {left: -100%;}
   to {left: 100%;}
 }
+@keyframes floating{0%,to{transform:translate(0,0)}65%{transform:translate(0,15px)}}
 @media (max-width: 991px) {
     nav .nav-bar .sidebarOpen{
         display: block;
@@ -255,10 +743,29 @@ nav .nav-bar .logo a{
 	.menu .logo-toggle a img{
 		width: 170px;
 	}
-    .hero{
-        height: 90vh;
-    }
     .lead{
         font-size: 1rem;
+    }
+    .owl-carousel .owl-dots.disabled, .owl-carousel .owl-nav.disabled {
+      display: none;
+    }
+    .hero .owl-carousel .owl-nav.disabled {
+      display: none;
+    }
+    .mentors .owl-carousel .owl-nav.disabled {
+      display: none;
+    }
+    .Course .owl-carousel .owl-nav.disabled {
+      display: block;
+    }
+    .Reviews .owl-prev {
+      position: absolute;
+      left: 18%;
+      top: 40%;
+    }
+    .Reviews .owl-next {
+      position: absolute;
+      right: 18%;
+      top: 40%;
     }
 }
