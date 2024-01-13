@@ -1,3 +1,4 @@
+// Responsive Navigation
 const body = document.querySelector("body"),
 	nav = document.querySelector("nav"),
 	sidebarOpen = document.querySelector(".sidebarOpen"),
@@ -40,7 +41,7 @@ $('.courses-department').owlCarousel({
         },
         768:{
             items:4,
-            nav:true
+            nav:false
         },
         992:{
             items:6,
@@ -48,6 +49,7 @@ $('.courses-department').owlCarousel({
         }
     }
 });
+
 // Course Slider
 $('.course-carosel').owlCarousel({
     margin:2,
@@ -72,6 +74,7 @@ $('.course-carosel').owlCarousel({
         }
     }
 });
+
 // Mentor Slider
 $('.mentor-carosel').owlCarousel({
     loop:true,
@@ -95,11 +98,11 @@ $('.mentor-carosel').owlCarousel({
             items: 2,
         },
         768:{
-            items:2,
-            nav: true
+            items:2
         },
         992:{
-            items:3
+            items:3,
+            nav: true
         }
     }
 });
@@ -136,3 +139,39 @@ $('.review-carosel').owlCarousel({
         }
     }
 });
+// Slick Slider Workshop image section
+$(".wokspece_img").slick({
+  autoplay:false,
+  slidesToShow:1,
+  slidesToScroll:1,
+  // fade:true,
+  arrows:false,
+  dots:false,
+  asNavFor:".wokspece_navs"
+})
+$(".wokspece_navs").slick({
+  autoplay:false,
+  slidesToShow:9,
+  slidesToScroll:1,
+  // fade:true,
+  focusOnSelect:true,
+  arrows:true,
+  dots:false,
+  asNavFor:".wokspece_img",
+  prevArrow:'<i class="fa fa-angle-left workspecePrevArrow"></i>',
+  nextArrow:'<i class="fa fa-angle-right workspeceNextArrow"></i>',
+  responsive: [
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 5
+      }
+    },
+    {
+      breakpoint: 576,
+      settings: {
+        slidesToShow: 3
+      }
+    }
+  ]
+})
