@@ -139,6 +139,7 @@ $('.review-carosel').owlCarousel({
         }
     }
 });
+
 // Slick Slider Workshop image section
 $(".wokspece_img").slick({
   autoplay:false,
@@ -175,3 +176,41 @@ $(".wokspece_navs").slick({
     }
   ]
 })
+
+//video-popup
+new VenoBox({
+    selector: '.RICT_Videos',
+});
+
+// AutoColored Section
+let sections = document.querySelectorAll('.sec');
+let navLinks = document.querySelectorAll('.course_detailes .navtabs a');
+window.onscroll = () => {
+    sections.forEach(sec => {
+        let top = window.scrollY;
+        let offset = sec.offsetTop - 15;
+        let height = sec.offsetHeight;
+        let id = sec.getAttribute('id');
+        if(top >= offset && top < offset + height) {
+            navLinks.forEach(links => {
+                links.classList.remove('active');
+                document.querySelector('.course_detailes .navtabs a[href*=' + id + ']').classList.add('active');
+            });
+        };
+    });
+}
+
+// demo-carosel
+$('.demo-carosel').owlCarousel({
+    loop:true,
+    items: 1,
+    margin:12,
+    nav: true,
+    dots: false,
+    autoplay:true,
+    lazyLoad: true,
+    center: true,
+    navText: ['<i class="fa-solid fa-arrow-left"></i>','<i class="fa-solid fa-arrow-right"></i>'],
+    autoplayTimeout: 2000,
+    autoplayHoverPause: true,
+});

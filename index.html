@@ -100,7 +100,7 @@
                       <li><a href="#">Review</a></li>
                       <li><a href="#">Contact</a></li>
                       <li>
-                        <a href="#" class="admit_btn">
+                        <a href="#admissionModal" data-bs-toggle="modal" class="admit_btn">
                             <i class="ti-crown fw-bold"></i>
                             Admission
                         </a>
@@ -289,7 +289,7 @@
                             <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#web" type="button" role="tab">Web & Software Development</button>
                         </li>
                     </ul>
-                    <div class="tab-content" id="myTabContent">
+                    <div class="tab-content course_items" id="myTabContent">
                         <div class="tab-pane fade show active" id="basic" role="tabpanel">
                            <div class="row">
                                <div class="col-12 col-md-6 col-lg-4 mt-4">
@@ -1128,6 +1128,45 @@
         </div>
     </footer>
     <!-- Footer End -->
+    <div class="modal fade" id="admissionModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 text-uppercase" id="exampleModalLabel">Admission Form</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form action="" method="" class="text-start">
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="name" placeholder="Enter Name">
+                    <label for="name">Name</label>
+                </div>
+                <div class="form-floating mt-3">
+                    <input type="email" class="form-control" id="email" placeholder="Enter E-mail">
+                    <label for="email">Email</label>
+                </div>
+                <div class="form-floating mt-3">
+                    <input type="number" class="form-control" id="number" placeholder="Enter Number">
+                    <label for="number">Number</label>
+                </div>
+                <div class="mt-3">
+                    <select name="subject" id="subject" class="form-select form-select-lg">
+                        <option value="Select One">Select</option>
+                    </select>
+                </div>
+                <div class="form-floating mt-3">
+                    <textarea name="massage" id="massage" class="form-control" placeholder="Enter Massage"></textarea>
+                    <label for="massage">Message</label>
+                </div>
+                <div class="mt-3">
+                    <input type="submit" class="form-control form-control-lg" value="SUBMIT" name="submit">
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal-end -->
     <script src="assets/js/jquery-3.7.1.js"></script>
     <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
