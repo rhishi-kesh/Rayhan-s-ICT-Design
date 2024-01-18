@@ -5,6 +5,8 @@
     --gray: #F5FAFE;
     --orange: #E16127;
     --blur-o: rgba(44, 52, 126,0.1);
+    --light-blue: #E4EEF7;
+    --light-orange: #FFF1E4;
 }
 *{
 	font-family: 'Poppins', sans-serif;
@@ -1047,18 +1049,18 @@ footer .contact i{
     text-transform: uppercase;
 }
 .mission_vision .Mission{
-    background: #E4EEF7;
+    background: var(--light-blue);
 }
 .mission_vision .Vision{
-    background: #FFF1E4;
+    background: var(--light-orange);
 }
 .mission_vision .History{
-    background: #E4EEF7;
+    background: var(--light-blue);
 }
 .courses .card{
     text-align: center;
     padding: 22px;
-    background: #E4EEF7;
+    background: var(--light-blue);
     height: 170px;
     display: flex;
     justify-content: center;
@@ -1115,7 +1117,7 @@ footer .contact i{
   cursor: pointer;
 }
 .contact .socal-card{
-    background: #FFF1E4;
+    background: var(--light-orange);
     padding: 95px 55px;
     text-align: center;
     color: var(--dark);
@@ -1127,7 +1129,7 @@ footer .contact i{
     height: auto;
 }
 .contact .contact-card{
-    background: #E4EEF7;
+    background: var(--light-blue);
     padding: 55px;
     text-align: center;
     color: var(--dark);
@@ -1220,7 +1222,7 @@ footer .contact i{
     border-radius: 20px;
     font-size: 13px;
     display: inline-block;
-    background: #E4EEF7;
+    background: var(--light-blue);
 }
 .single_course_header .admit_btn{
     font-size: 18px;
@@ -1330,7 +1332,7 @@ footer .contact i{
     display: inline-block;
     width: 722px;
     border-radius: 16px;
-    background: #E4EEF7;
+    background: var(--light-blue);
     border: none;
 }
 .content #Course_Details .card ul li{
@@ -1379,13 +1381,13 @@ footer .contact i{
     padding-bottom: 2px;
 }
 #Modules .accordion-header button{
-    background: #E4EEF7;
+    background: var(--light-blue);
     padding: 20px;
 }
 #Instructor .card{
     width: 722px;
     margin: auto;
-    background: #E4EEF7;
+    background: var(--light-blue);
 }
 #Instructor .card img{
     width: 100px;
@@ -1406,6 +1408,44 @@ footer .contact i{
 }
 .faq_single_course h2{
     color: var(--blue);
+}
+.seminer-header{
+    background: var(--light-orange);
+}
+.seminer .card h5 a{
+    text-decoration: none;
+    color: var(--dark);
+}
+.seminer .card .join-btn{
+    text-decoration: none;
+    color: var(--white);
+    background: var(--blue);
+    padding: 10px 30px;
+    border-radius: 20px;
+    transition: all 0.6s;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+}
+.seminer .card .join-btn:hover::before{
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10%;
+    width: 100%;
+    height: 2px;
+    transform: rotate(45deg);
+    background: var(--white);
+    transition: all 0.3s;
+    box-shadow: 0px 0px 10px var(--white),
+                0px 0px 20px var(--white),
+                0px 0px 10px var(--white),
+                0px 0px 10px var(--white);
+    z-index: -1;
+    animation: hero-btn;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
 }
 
 @keyframes btn {
@@ -1534,7 +1574,7 @@ footer .contact i{
     }
     .single_course_header{
         padding: 40px 0 20px 0;
-        background: #FFF1E4;
+        background: var(--light-orange);
     }
 }
 @media screen and (max-width: 768px){
