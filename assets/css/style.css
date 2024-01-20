@@ -1447,6 +1447,33 @@ footer .contact i{
     animation-duration: 4s;
     animation-iteration-count: infinite;
 }
+.career-process .card{
+    padding: 20px;
+    border: none;
+}
+.career-process .col-md-6:nth-child(even) .card{
+  background-color: var(--light-blue);
+}
+.career-process .col-md-6:nth-child(odd) .card{
+  background-color: var(--light-orange);
+}
+.career_from form textarea {
+  height: 110px !important;
+}
+.career_from form input[type="submit"] {
+  background: var(--blue);
+  color: var(--white);
+  text-decoration: none;
+  padding: 12px 18px;
+  display: inline-block;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: all 0.6s;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
 
 @keyframes btn {
   from {left: -100%;}
