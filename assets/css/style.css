@@ -160,7 +160,7 @@ nav .nav-bar .logo a{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('../img/hero-bg.jpg');
+    background: url('../img/bgr5.jpg');
     background-size: cover;
     background-position: center;
     height: auto;
@@ -1058,6 +1058,20 @@ footer .contact i{
     position: absolute;
     top: 0;
     left: 0;
+    background: var(--orange);
+}
+.missionVision h1{
+    padding-left: 0px;
+    padding-right: 25px;
+}
+.missionVision h1::before{
+    content: '';
+    width: 5px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: auto;
     background: var(--orange);
 }
 .workshop .wokspece_navs{
